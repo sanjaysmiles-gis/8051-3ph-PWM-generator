@@ -1,0 +1,39 @@
+#include <reg51.h>
+
+sbit Phase1 = P0^0;  // Phase 1 output (Pin P0.0)
+sbit Phase2 = P0^1;  // Phase 2 output (Pin P0.1)
+sbit Phase3 = P0^2;  // Phase 3 output (Pin P0.2)
+
+// Simple delay loop (~1us resolution at 12 MHz)
+void delay_us(unsigned int us)
+{
+    unsigned int i;
+    while(us--)
+    {
+        for(i = 0; i < 12; i++);  // Calibrated for 12MHz
+    }
+}
+
+void main()
+{
+    while(1)
+    {
+        delay_us(3310);
+        Phase1 = 0;
+
+        delay_us(3310);
+        Phase2 = 1;
+
+        delay_us(3310);
+        Phase3 = 0;
+
+        delay_us(3310);
+        Phase1 = 1;
+
+        delay_us(3310);
+        Phase2 = 0;
+
+        delay_us(3310);
+        Phase3 = 1;
+    }
+}
