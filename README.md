@@ -1,7 +1,7 @@
 # 8051-3ph-PWM-generator
 
 💡 Three-Phase Inverter Using 8051 Microcontroller – Proteus Simulation
-This project showcases the simulation of a three-phase voltage source inverter controlled by an 8051 microcontroller (AT89S52). It effectively converts DC input into a three-phase AC output using MOSFETs and is perfect for learning or demonstrating the basics of microcontroller-based power conversion.
+This project showcases the simulation of a three-phase voltage source inverter controlled by an 8051 microcontroller (AT89C51). It effectively converts DC input into a three-phase AC output using MOSFETs and is perfect for learning or demonstrating the basics of microcontroller-based power conversion.
 
 🔧 Components Used:
 8051 Microcontroller (AT89S52) – Generates PWM signals for inverter control.
